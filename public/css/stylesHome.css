@@ -48,6 +48,7 @@ body::after {
     white-space: nowrap;
     text-overflow: clip; 
     min-width: fit-content; 
+    text-align: center;
 }
 
 .content {
@@ -62,7 +63,7 @@ body::after {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    width: 98%;
+    width: 100%;
     justify-items: center;
     align-items: start;
 }
