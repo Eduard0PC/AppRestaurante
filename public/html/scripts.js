@@ -47,3 +47,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = '/';
     }
 });
+
+//MANEJO DEL BOTON DE CERRAR SESION
+document.getElementById('salirCard').addEventListener('click', async () => {
+    const response = await fetch('/logout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    });
+
+    const data = await response.json();
+    if (data.success) {
+        window.location.href = '/';
+    } else {
+        alert('Error al cerrar sesión');
+    }
+});
