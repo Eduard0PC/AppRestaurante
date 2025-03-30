@@ -64,6 +64,7 @@ body::after {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
+    height: 100%;
     justify-items: center;
     align-items: start;
 }
@@ -73,12 +74,11 @@ body::after {
     background-color: #ebebeb;
     color: #000000;
     border-radius: 20px;
-    padding: 10px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: left;
     transition: transform 0.2s;
     width: 90%;
-    height: 80px;
+    height: 350px;
     min-height: 150px;
     min-width: 250px;
     display: flex;
@@ -135,7 +135,7 @@ body::after {
     .card {
         max-width: 300px;
         height: auto;
-        min-height: 100px;
+        min-height: 150px;
         padding: 10px;
         flex-direction: column;
         align-items: center;
