@@ -161,6 +161,71 @@ body::after {
     background-color: #cc0000;
 }
 
+#empleadosModal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
+    overflow: auto;
+}
+
+.empleados-content {
+    width: 95%;
+    max-width: 800px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: auto;
+    max-height: 90vh;
+}
+
+.empleados-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#tablaContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f0f0f0;
+}
+
+.empleados-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.empleados-content button:hover {
+    background-color: #cc0000;
+}
+
 /* Movil */
 @media (max-width: 768px) {
     .allcards {
