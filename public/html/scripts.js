@@ -62,3 +62,34 @@ document.getElementById('salirCard').addEventListener('click', async () => {
         alert('Error al cerrar sesión');
     }
 });
+
+
+//MANEJO DEL BOTON DE GENERAR QR
+document.addEventListener('DOMContentLoaded', () => {
+    const qrCard = document.querySelector('.card-qr');
+
+    qrCard.addEventListener('click', async () => {
+        try {
+            const response = await fetch('/generate-qr', {
+                method: 'POST'
+            });
+
+            const data = await response.json();
+            if (data.qrCode) {
+                document.getElementById('qrImage').src = data.qrCode;
+                document.getElementById('qrModal').style.display = 'flex';
+            } else {
+                alert('No se pudo generar el QR');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Error al contactar el servidor');
+        }
+    });
+});
+
+function cerrarQR() {
+    const modal = document.getElementById('qrModal');
+    modal.style.display = 'none';
+}
+window.cerrarQR = cerrarQR;

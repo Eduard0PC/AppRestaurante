@@ -113,6 +113,54 @@ body::after {
     background-color: #45a049;
 }
 
+#qrModal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.qr-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+
+.qr-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.qr-content img {
+    width: 80vw;
+    max-width: 400px;
+    height: auto;
+}
+
+.qr-content button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #ff4444;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.qr-content button:hover {
+    background-color: #cc0000;
+}
+
 /* Movil */
 @media (max-width: 768px) {
     .allcards {

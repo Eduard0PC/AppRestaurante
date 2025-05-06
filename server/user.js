@@ -24,4 +24,11 @@ router.get('/home', authMiddleware, (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'html', 'home.html'));
 });
 
+// Obtener solo el ID del usuario autenticado
+router.get('/current-user', (req, res) => {
+    if (!req.session.user) {
+        return res.status(401).json({ error: 'No autenticado' });
+    }
+    res.json({ id: req.session.user.id });
+});
 module.exports = router;

@@ -4,6 +4,7 @@ const session = require('express-session');
 const path = require('path');
 const authRoutes = require('./auth');
 const userRoutes = require('./user');
+const qrRoutes = require('./qr');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -24,6 +25,7 @@ app.use(session({
 // Rutas
 app.use('/', authRoutes);
 app.use('/', userRoutes);
+app.use('/', qrRoutes);
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
