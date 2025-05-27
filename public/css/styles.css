@@ -6,6 +6,16 @@ body {
     background-color: #1a1a1a;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    box-sizing: border-box;
+    display: block;
+}
+
 .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -101,7 +111,9 @@ body {
         display: flex;
         flex-direction: column;
         width: 100%;
+        min-height: 100vh;
         height: auto;
+        overflow-y: auto; 
     }
     .up {
         order: 1;
@@ -111,5 +123,7 @@ body {
         order: 2;
         padding: 10px;
         margin-top: 10px;
+        box-sizing: border-box;
+        overflow-y: auto;
     }
 }
